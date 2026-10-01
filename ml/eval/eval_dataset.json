@@ -1,0 +1,221 @@
+{
+  "version": "1.0",
+  "description": "Recall Evaluation Benchmark Dataset for deep learning course project (20 Memories, 10 Queries).",
+  "memories": [
+    {
+      "id": "e0000001-0000-0000-0000-000000000001",
+      "source_type": "text",
+      "title": "Triplet Loss Formulation in Metric Learning",
+      "raw_content": "Triplet loss is formulated as L = max(0, d(a, p) - d(a, n) + alpha), where 'a' is the anchor, 'p' is a positive sample with the same semantic label, 'n' is a negative sample, and alpha represents the distance margin. It forces representations of similar concepts to cluster together in Euclidean or cosine embedding space while repelling dissimilar examples.",
+      "source_url": "https://en.wikipedia.org/wiki/Triplet_loss"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000002",
+      "source_type": "webpage",
+      "title": "Attention Is All You Need - Scaled Dot-Product Attention",
+      "raw_content": "The fundamental self-attention mechanism computes Attention(Q, K, V) = softmax(Q * K^T / sqrt(d_k)) * V. The scaling factor 1/sqrt(d_k) counteracts extremely small gradients caused by large dot products entering regions of the softmax function where derivatives vanish.",
+      "source_url": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000003",
+      "source_type": "text",
+      "title": "Sentence-Transformers all-MiniLM-L6-v2 Architecture",
+      "raw_content": "The all-MiniLM-L6-v2 model is a 6-layer distilled transformer producing 384-dimensional dense sentence embeddings. It maps sentences into a vector space where semantic cosine similarity reflects conceptual relatedness, utilizing mean pooling over token representations.",
+      "source_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000004",
+      "source_type": "webpage",
+      "title": "HNSW (Hierarchical Navigable Small World) Vector Indexing",
+      "raw_content": "HNSW is a graph-based algorithm for approximate nearest neighbor (ANN) search. It builds a multi-layer graph where upper layers have sparse, long-range links for rapid routing across embedding clusters, and bottom layers have dense local connections for precise nearest neighbor convergence.",
+      "source_url": "https://arxiv.org/abs/1603.09320"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000005",
+      "source_type": "webpage",
+      "title": "PostgreSQL pgvector Extension Indexing Options",
+      "raw_content": "pgvector adds vector similarity search to PostgreSQL. It supports exact sequential scan, IVFFlat (inverted file with flat quantization, requiring clustering training), and HNSW graph indexing for sub-millisecond retrieval with high recall. Supported distance metrics include L2 distance (<->), inner product (<#>), and cosine distance (<=>).",
+      "source_url": "https://github.com/pgvector/pgvector"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000006",
+      "source_type": "text",
+      "title": "Hybrid Search and Reciprocal Rank Fusion (RRF)",
+      "raw_content": "Hybrid search combines sparse lexical retrieval (BM25 or full-text keyword indexing) with dense semantic vector retrieval. Reciprocal Rank Fusion (RRF) scores each document d as RRF_score(d) = sum(1 / (k + rank_m(d))) across retrieval modalities m, with smoothing parameter k usually set to 60.",
+      "source_url": "https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000007",
+      "source_type": "text",
+      "title": "Vanishing Gradients in Recurrent Neural Networks",
+      "raw_content": "During backpropagation through time (BPTT), repeated multiplication of weight matrices can cause gradient signals to exponentially shrink toward zero or explode. LSTMs and GRUs combat vanishing gradients using gating mechanisms and additive memory cell pathways.",
+      "source_url": "https://deeplearning.cs.cmu.edu"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000008",
+      "source_type": "text",
+      "title": "AdamW Optimizer: Decoupling Weight Decay from Gradient Updates",
+      "raw_content": "Loshchilov and Hutter showed that L2 regularization in standard Adam is not equivalent to true weight decay because the moving average of squared gradients scales down the decay for frequently updated parameters. AdamW fixes this by decoupling weight decay directly from gradient updates.",
+      "source_url": "https://arxiv.org/abs/1711.05101"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000009",
+      "source_type": "webpage",
+      "title": "Groq LPU Architecture for Low-Latency LLaMA Inference",
+      "raw_content": "Groq LPUs (Language Processing Units) achieve extreme token throughput for large language models like LLaMA 3.1 through deterministic execution, eliminating dynamic branch prediction and caching delays, coupled with massive on-chip SRAM memory bandwidth.",
+      "source_url": "https://groq.com/architecture"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000010",
+      "source_type": "text",
+      "title": "Contrastive Representation Learning and InfoNCE Loss",
+      "raw_content": "Contrastive learning approaches like SimCLR and MoCo maximize agreement between differently augmented views of the same sample while repelling views of different samples using the InfoNCE (Information Noise-Contrastive Estimation) loss with temperature tau.",
+      "source_url": "https://arxiv.org/abs/2002.05709"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000011",
+      "source_type": "text",
+      "title": "OCR Text Extraction Pipeline with PyTesseract",
+      "raw_content": "Optical Character Recognition (OCR) converts image pixels of text into machine-encoded characters. Tesseract 4/5 uses an LSTM neural network OCR engine that recognizes character sequences and line patterns after image binarization and morphological preprocessing.",
+      "source_url": "https://tesseract-ocr.github.io"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000012",
+      "source_type": "text",
+      "title": "Cosine Similarity vs Euclidean Distance in Metric Spaces",
+      "raw_content": "When vectors are L2-normalized to unit length (||u|| = 1), squared Euclidean distance is strictly monotonic with cosine distance: ||u - v||^2 = 2 - 2 * cos(u, v). Therefore, nearest neighbor searches under cosine similarity and Euclidean distance yield identical rankings for normalized embeddings.",
+      "source_url": "https://mathworld.wolfram.com"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000013",
+      "source_type": "text",
+      "title": "Learning Rate Warmup and Cosine Annealing Schedules",
+      "raw_content": "Linear warmup linearly increases the learning rate during the first few hundred steps to prevent early divergence from poorly initialized adaptive moments. Following warmup, cosine annealing gradually reduces the learning rate to zero following a cosine curve.",
+      "source_url": "https://arxiv.org/abs/1608.03983"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000014",
+      "source_type": "text",
+      "title": "Cross-Entropy Loss vs Negative Log Likelihood",
+      "raw_content": "Categorical cross-entropy measures the divergence between true label distribution and predicted probabilities. In deep learning frameworks, combining LogSoftmax with NLLLoss produces numerically stable cross-entropy computation avoiding arithmetic underflow.",
+      "source_url": "https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000015",
+      "source_type": "text",
+      "title": "Layer Normalization in Transformer Networks",
+      "raw_content": "Unlike Batch Normalization which computes statistics across the mini-batch dimension, Layer Normalization computes mean and variance across all features of each individual token. This makes Transformers batch-size invariant and effective for variable-length sequences.",
+      "source_url": "https://arxiv.org/abs/1607.06450"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000016",
+      "source_type": "text",
+      "title": "Parameter-Efficient Fine-Tuning with LoRA",
+      "raw_content": "Low-Rank Adaptation (LoRA) freezes pretrained transformer weights and injects trainable rank decomposition matrices (A and B with rank r << d) into attention projection layers, reducing fine-tuning memory and trainable parameters by up to 99%.",
+      "source_url": "https://arxiv.org/abs/2106.09685"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000017",
+      "source_type": "text",
+      "title": "Django REST Framework Pagination and Performance",
+      "raw_content": "Django REST Framework provides PageNumberPagination and CursorPagination. PageNumberPagination allows clients to request arbitrary page numbers using LIMIT and OFFSET, while CursorPagination uses timestamp tokens for consistent ordering without offset overhead.",
+      "source_url": "https://www.django-rest-framework.org"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000018",
+      "source_type": "text",
+      "title": "Hard Negative Mining in Metric and Embedding Learning",
+      "raw_content": "Hard negatives are non-matching examples that produce embeddings deceptively close to the anchor in vector space (d(a, n) < d(a, p) + alpha). Selecting semi-hard and hard negatives during triplet generation prevents zero-loss gradients and significantly accelerates convergence.",
+      "source_url": "https://arxiv.org/abs/1503.03832"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000019",
+      "source_type": "text",
+      "title": "Next.js App Router Server vs Client Components",
+      "raw_content": "Next.js App Router renders React Server Components by default on the server with zero client bundle impact. Interactive hooks like useState and useEffect require adding the 'use client' directive at the top of component files.",
+      "source_url": "https://nextjs.org/docs/app"
+    },
+    {
+      "id": "e0000001-0000-0000-0000-000000000020",
+      "source_type": "text",
+      "title": "Information Retrieval Metrics: Recall@K and MRR",
+      "raw_content": "Recall@K measures the proportion of relevant documents successfully retrieved within the top K results. Mean Reciprocal Rank (MRR) evaluates ranking quality by computing the average of 1 / rank_i where rank_i is the 1-based index of the first relevant document returned.",
+      "source_url": "https://nlp.stanford.edu/IR-book"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "q01",
+      "query": "How does triplet loss optimize distances between anchor, positive, and negative embeddings?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000001",
+        "e0000001-0000-0000-0000-000000000018"
+      ]
+    },
+    {
+      "query_id": "q02",
+      "query": "What is the mathematical formula and scaling factor for transformer self attention?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000002"
+      ]
+    },
+    {
+      "query_id": "q03",
+      "query": "How does pgvector implement approximate nearest neighbor indexing and what distance metrics are available?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000005",
+        "e0000001-0000-0000-0000-000000000004"
+      ]
+    },
+    {
+      "query_id": "q04",
+      "query": "Why is layer normalization preferred over batch normalization in transformer architectures?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000015"
+      ]
+    },
+    {
+      "query_id": "q05",
+      "query": "How does hybrid search combine keyword matching with dense vector retrieval using RRF?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000006"
+      ]
+    },
+    {
+      "query_id": "q06",
+      "query": "What is the difference between standard Adam and AdamW with decoupled weight decay?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000008"
+      ]
+    },
+    {
+      "query_id": "q07",
+      "query": "How do we evaluate search ranking quality using MRR and Recall at K?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000020"
+      ]
+    },
+    {
+      "query_id": "q08",
+      "query": "What are hard negatives and why are they critical for training metric learning models?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000018",
+        "e0000001-0000-0000-0000-000000000001"
+      ]
+    },
+    {
+      "query_id": "q09",
+      "query": "How does Groq LPU accelerate inference for LLaMA 3 models?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000009"
+      ]
+    },
+    {
+      "query_id": "q10",
+      "query": "What is all-MiniLM-L6-v2 embedding dimension and pooling strategy?",
+      "expected_memory_ids": [
+        "e0000001-0000-0000-0000-000000000003"
+      ]
+    }
+  ]
+}

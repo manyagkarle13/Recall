@@ -1,0 +1,12 @@
+{
+  "base_model": {
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+  },
+  "finetuned_model": {
+    "recall@1": 1.0,
+    "recall@5": 1.0,
+    "mrr": 1.0
+  }
+}

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: recall_pgvector
+    environment:
+      POSTGRES_DB: recall_db
+      POSTGRES_USER: recall_user
+      POSTGRES_PASSWORD: recall_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgvector_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  pgvector_data:

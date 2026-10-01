@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recall</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="brand">
+        <div class="logo">R</div>
+        <div class="brand-text">
+          <span class="title">Recall</span>
+          <span class="badge">v1.0</span>
+        </div>
+      </div>
+      <a href="http://localhost:3000" target="_blank" class="open-app-btn" title="Open Recall App">
+        App ↗
+      </a>
+    </div>
+
+    <!-- Active Page Info -->
+    <div class="page-info">
+      <div class="info-label">Active Page:</div>
+      <div id="page-title" class="page-title truncate">Loading tab info...</div>
+      <div id="page-url" class="page-url truncate">-</div>
+    </div>
+
+    <div id="auth-panel" class="auth-panel">
+      <div class="info-label">Log in to save to your account</div>
+      <input id="login-username" class="auth-input" type="text" placeholder="Username" autocomplete="username">
+      <input id="login-password" class="auth-input" type="password" placeholder="Password" autocomplete="current-password">
+      <button id="login-btn" class="primary-btn">Log in</button>
+      <div id="login-error" class="error-text hidden"></div>
+    </div>
+
+    <!-- Selection Status -->
+    <div id="selection-banner" class="selection-banner hidden">
+      <span class="selection-icon">✂</span>
+      <span id="selection-text">Selected text ready to save</span>
+    </div>
+
+    <!-- Actions (Text & Screenshot) -->
+    <div id="actions" class="actions hidden">
+      <button id="save-btn" class="primary-btn mb-2">
+        <span id="btn-text">📄 Remember Page Text</span>
+        <div id="spinner" class="spinner hidden"></div>
+      </button>
+
+      <button id="screenshot-btn" class="secondary-btn">
+        <span id="screenshot-btn-text">📸 Remember this (Screenshot)</span>
+        <div id="screenshot-spinner" class="spinner hidden"></div>
+      </button>
+    </div>
+
+    <!-- Status / Confirmation View -->
+    <div id="status-card" class="status-card hidden">
+      <div class="status-icon">✓</div>
+      <div class="status-content">
+        <div id="status-title" class="status-title">Saved to Recall!</div>
+        <div id="status-details" class="status-details">Vectorized in 384-d space</div>
+      </div>
+    </div>
+
+    <!-- Error View -->
+    <div id="error-card" class="error-card hidden">
+      <div class="error-title">Save Failed</div>
+      <div id="error-text" class="error-text">Check if backend is running</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span id="backend-status" class="backend-dot online"></span>
+      <span class="footer-text">OCR & Hybrid Search Ready</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

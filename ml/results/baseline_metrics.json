@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-16T13:15:52.969750",
+  "model_name": "all-MiniLM-L6-v2 (pretrained base)",
+  "embedding_dimension": 384,
+  "dataset_size": 20,
+  "query_count": 10,
+  "results": {
+    "Vector Search (Base all-MiniLM-L6-v2)": {
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "mrr": 1.0
+    },
+    "Keyword Search (Lexical Overlap)": {
+      "recall@1": 0.9,
+      "recall@5": 1.0,
+      "mrr": 0.9333
+    },
+    "Hybrid Search (alpha=0.6)": {
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "mrr": 1.0
+    }
+  }
+}

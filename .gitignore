@@ -1,0 +1,33 @@
+# Environment variables
+.env
+.env.local
+
+# Python
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+
+# Node.js & Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Media uploads (optional - keep empty media dir if needed)
+backend/media/screenshots/*
+!backend/media/screenshots/.gitkeep
+backend/media/pdfs/*
+!backend/media/pdfs/.gitkeep
+
+# ML Checkpoints & Model Weights
+ml/checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.onnx
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
